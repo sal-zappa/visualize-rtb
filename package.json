@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sal-zappa/visualize-rtb#readme",
   "devDependencies": {
-    "jasmine": "^3.6.3"
+    "jasmine": "^3.6.3",
+    "typescript": "^4.1.3"
   }
 }
