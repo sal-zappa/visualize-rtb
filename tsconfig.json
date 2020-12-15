@@ -1,15 +1,14 @@
 {
-  "compilerOptions": {
-    "module": "system",
-    "removeComments": true,
-    "outFile": "dist/dist.js",
-    "sourceMap": true
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+    "compilerOptions": {
+        "module": "system",
+        "removeComments": true,
+        "outFile": "dist/dist.js",
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "**/*.spec.ts"
+    ]
 }

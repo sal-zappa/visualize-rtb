@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine --config=jasmine.json"
+    "build": "tsc",
+    "test": "tsc --project tsconfig.test.json && jasmine --config=jasmine.json"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/sal-zappa/visualize-rtb#readme",
   "devDependencies": {
     "jasmine": "^3.6.3",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "@types/jasmine": "^3.6.2"
   }
 }
