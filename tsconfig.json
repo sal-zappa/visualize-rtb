@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "commonjs",
         "removeComments": true,
         "outDir": "dist",
         "sourceMap": true,
