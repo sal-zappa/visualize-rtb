@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "removeComments": true,
-        "outDir": "dist",
+        "outDir": "build",
         "sourceMap": true,
         "lib": ["ES2015", "DOM"]
     },
