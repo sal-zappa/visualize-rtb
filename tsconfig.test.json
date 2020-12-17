@@ -4,7 +4,7 @@
         "outFile": "dist/test.js"
     },
     "include": [
+        "src/**/*.d.ts",
         "src/**/*.spec.ts"
-    ],
-    "exclude": []
+    ]
 }
