@@ -8,6 +8,6 @@
         "lib": ["ES2019", "DOM"]
     },
     "include": [
-        "src/background.ts"
+        "src/extension/background.ts"
     ]
 }

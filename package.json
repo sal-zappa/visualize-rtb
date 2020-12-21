@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dist": "tsc --project tsconfig.dist.json && mkdir -p dist && cp build/background.js src/manifest.json src/popup.html src/popup.js dist",
-    "test": "tsc --project tsconfig.test.json && jasmine --config=jasmine.json"
+    "dist": "tsc --project tsconfig.dist.json && mkdir -p dist && cp build/background.js src/manifest.json src/popup/popup.html src/popup/popup.js dist",
+    "test": "tsc && jasmine --config=jasmine.json"
   },
   "repository": {
     "type": "git",
