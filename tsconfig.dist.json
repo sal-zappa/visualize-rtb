@@ -1,12 +1,13 @@
 {
+    "extends": "./tsconfig.json",
     "compilerOptions": {
         "module": "commonjs",
         "removeComments": false,
         "outDir": "build",
-        "sourceMap": true,
+        "sourceMap": false,
         "lib": ["ES2019", "DOM"]
     },
     "include": [
-        "src/**/*"
+        "src/background.ts"
     ]
 }
