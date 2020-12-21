@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dist": "tsc --project tsconfig.dist.json && mkdir -p dist && cp build/background.js src/manifest.json dist",
+    "dist": "tsc --project tsconfig.dist.json && mkdir -p dist && cp build/background.js src/manifest.json src/popup.html dist",
     "test": "tsc --project tsconfig.test.json && jasmine --config=jasmine.json"
   },
   "repository": {
