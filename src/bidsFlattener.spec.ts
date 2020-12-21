@@ -62,6 +62,4 @@ describe("flattenBids()", () => {
         const flattenedBids = flattenBids(bids);
         expect(flattenedBids.length).toBe(3);
     });
-
-    // it should return more than one bid
 });
