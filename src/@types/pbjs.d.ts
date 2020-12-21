@@ -11,11 +11,11 @@ interface RespondedBid extends Bid {
 }
 
 interface BidsByAdUnit {
-    [adUnitCode: string]: Bid
+    [adUnitCode: string]: {bids: Bid[]}
 }
 
 interface RespondedBidsByAdUnit {
-    [adUnitCode: string]: RespondedBid
+    [adUnitCode: string]: {bids: RespondedBid[]}
 }
 
 declare namespace pbjs {
