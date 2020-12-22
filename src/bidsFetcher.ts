@@ -3,7 +3,7 @@ import { flattenBids } from "./bidsFlattener";
 const winningBids = pbjs.getAllWinningBids();
 
 const bidResponsesByAdUnit = pbjs.getBidResponses();
-const respondedBids = flattenBids(bidResponsesByAdUnit) as RespondedBid[];
+const respondedBids = flattenBids(bidResponsesByAdUnit);
 
 const noBidsByAdUnit = pbjs.getNoBids();
 const unrespondedBids = flattenBids(noBidsByAdUnit);
