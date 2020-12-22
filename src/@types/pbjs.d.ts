@@ -1,4 +1,4 @@
-interface Bid {
+type Bid = {
     adUnitCode: string;
     adId: string;
     bidder: string;
@@ -7,7 +7,7 @@ interface Bid {
     statusMessage?: string;
 }
 
-interface BidsByAdUnit {
+type BidsByAdUnit = {
     [adUnitCode: string]: {bids: Bid[]}
 }
 
