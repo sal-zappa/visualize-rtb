@@ -1,11 +1,9 @@
 import { flattenBids } from "./bidsFlattener";
 
-const winningBids = pbjs.getAllWinningBids();
+export function fetchAllBids() {
+    const winningBids = pbjs.getAllWinningBids();
+    const respondedBids = flattenBids(pbjs.getBidResponses());
+    const unrespondedBids = flattenBids(pbjs.getNoBids());
 
-const bidResponsesByAdUnit = pbjs.getBidResponses();
-const respondedBids = flattenBids(bidResponsesByAdUnit);
-
-const noBidsByAdUnit = pbjs.getNoBids();
-const unrespondedBids = flattenBids(noBidsByAdUnit);
-
-const allBids = [...winningBids, ...respondedBids, ...unrespondedBids];
+    return [...winningBids, ...respondedBids, ...unrespondedBids];
+}
