@@ -11,7 +11,7 @@ interface RespondedBid extends Bid {
 }
 
 interface BidsByAdUnit {
-    [adUnitCode: string]: {bids: Bid[]}
+    [adUnitCode: string]: {bids: Bid[] | RespondedBid[]}
 }
 
 interface RespondedBidsByAdUnit {
@@ -20,6 +20,6 @@ interface RespondedBidsByAdUnit {
 
 declare namespace pbjs {
     function getAllWinningBids(): RespondedBid[]; // TODO verify return type by testing
-    function getBidResponses(): BidsByAdUnit;
-    function getNoBids(): RespondedBidsByAdUnit;
+    function getBidResponses(): RespondedBidsByAdUnit;
+    function getNoBids(): BidsByAdUnit;
 }
