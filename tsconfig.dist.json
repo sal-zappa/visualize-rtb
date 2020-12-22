@@ -6,8 +6,5 @@
         "outDir": "build",
         "sourceMap": false,
         "lib": ["ES2019", "DOM"]
-    },
-    "include": [
-        "src/extension/background.ts"
-    ]
+    }
 }
