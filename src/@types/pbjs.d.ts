@@ -5,6 +5,7 @@ type Bid = {
     timeToRespond?: number;
     cpm?: number;
     statusMessage?: string;
+    winner?: boolean;
 }
 
 type BidsByAdUnit = {
