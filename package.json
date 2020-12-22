@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "dist": "tsc --project tsconfig.dist.json && mkdir -p dist && cp build/background.js src/manifest.json src/popup/popup.html src/popup/popup.js dist",
+    "build": "rm -rf build/* && tsc",
+    "dist": "rm -rf build/* && tsc --project tsconfig.dist.json && mkdir -p dist && cp -r build/* src/manifest.json src/popup/* dist",
     "test": "tsc && jasmine --config=jasmine.json"
   },
   "repository": {
