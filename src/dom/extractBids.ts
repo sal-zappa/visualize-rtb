@@ -1,10 +1,10 @@
-function fetchAllBids(p: typeof pbjs) {
-    const winningBids = p.getAllWinningBids();
+function fetchAllBids(library: typeof pbjs) {
+    const winningBids = library.getAllWinningBids();
     for (const winningBid of winningBids) {
         winningBid.winner = true;
     }
-    const respondedBids = flattenBids(p.getBidResponses());
-    const unrespondedBids = flattenBids(p.getNoBids());
+    const respondedBids = flattenBids(library.getBidResponses());
+    const unrespondedBids = flattenBids(library.getNoBids());
 
     return [...winningBids, ...respondedBids, ...unrespondedBids];
 }
