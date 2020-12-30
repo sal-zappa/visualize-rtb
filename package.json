@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf build/* && tsc",
     "dist": "rm -rf build/* && rm -rf dist/* && tsc && webpack",
-    "test": "tsc && jasmine --config=jasmine.json"
+    "test": "rm -rf build/* && tsc && jasmine --config=jasmine.json",
+    "build-dom": "rm -rf build/* && tsc --project tsconfig.dom.json"
   },
   "repository": {
     "type": "git",

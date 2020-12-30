@@ -1,5 +1,3 @@
-import { flattenBids } from "./bidsFlattener";
-
 describe("flattenBids()", () => {
     it("should return one bid", () => {
         const bids: BidsByAdUnit = {
