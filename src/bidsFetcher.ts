@@ -1,7 +1,7 @@
 import { flattenBids } from "./bidsFlattener";
 
 export function fetchAllBids(p: typeof pbjs) {
-    const winningBids = p.getAllWinningBids(); // TODO pbjs should be injected
+    const winningBids = p.getAllWinningBids();
     for (const winningBid of winningBids) {
         winningBid.winner = true;
     }
