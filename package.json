@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf build/* && tsc",
-    "dist": "rm -rf build/* && rm -rf dist/* && tsc && webpack",
-    "test": "rm -rf build/* && tsc && jasmine --config=jasmine.json",
-    "build-dom": "rm -rf build/* && tsc --project tsconfig.dom.json"
+    "build": "rm -rf build/* && tsc --project tsconfig.dom.json && tsc",
+    "dist": "npm run build && rm -rf dist/* && webpack",
+    "test": "rm -rf build/* && tsc && jasmine --config=jasmine.json"
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,8 @@
 {
-    "extends": "./tsconfig.json",
     "compilerOptions": {
         "module": "none",
         "removeComments": true,
-        "outFile": "build/dom.js",
+        "outFile": "build/domScript.js",
         "sourceMap": false,
         "lib": ["ES2019", "DOM"],
         "target": "ES3"
