@@ -11,7 +11,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: "src/manifest.json" },
-                { from: "build/inject.js" },
+                { from: "build/execute.js" },
                 { from: "src/popup", to: "popup"},
             ],
         }),
