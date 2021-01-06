@@ -1,1 +1,3 @@
-document.body.style.backgroundColor = "red";
+chrome.tabs.executeScript({
+    file: "execute.js"
+});
