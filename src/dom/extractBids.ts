@@ -26,3 +26,5 @@ function filterAttributes(bids: Bid[]): Bid[] {
         }
     })
 }
+
+console.log(fetchAllBids(pbjs));
