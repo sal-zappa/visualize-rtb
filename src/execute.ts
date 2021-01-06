@@ -1,3 +1,6 @@
+/*
+    This script is executed when the extension icon is clicked
+*/
 const domScript = `
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
@@ -32,7 +35,9 @@ function filterAttributes(bids) {
         };
     });
 }
-console.log(fetchAllBids(pbjs));
+if (typeof pbjs !== "undefined") {
+    console.log(fetchAllBids(pbjs));
+}
 `;
 
 function createScriptElement() : HTMLScriptElement {
