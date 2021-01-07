@@ -39,6 +39,7 @@ if (typeof pbjs !== "undefined") {
     console.log(fetchAllBids(pbjs));
 }
 `;
+// TODO encode data in DOM
 
 function createScriptElement() : HTMLScriptElement {
     const scriptElement = document.createElement("script");
@@ -47,3 +48,7 @@ function createScriptElement() : HTMLScriptElement {
 }
 const script = createScriptElement();
 document.head.appendChild(script);
+
+console.log(document.getElementById("header-wrap"));
+// TODO fetch data from DOM and send it to extension popup
+chrome.runtime.sendMessage({greeting: "hello"});
