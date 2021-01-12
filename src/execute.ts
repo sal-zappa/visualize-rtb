@@ -52,6 +52,5 @@ function createScriptElement() : HTMLScriptElement {
 const script = createScriptElement();
 document.head.appendChild(script);
 
-console.log(document.getElementById("header-wrap"));
-// TODO fetch data from DOM and send it to extension popup
-chrome.runtime.sendMessage({greeting: "hello"});
+const allBids = JSON.parse(document.getElementById("visualise-rtb-data").dataset.bids);
+chrome.runtime.sendMessage({allBids: allBids});
