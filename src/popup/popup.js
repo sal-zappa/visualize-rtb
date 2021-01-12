@@ -5,7 +5,7 @@ chrome.tabs.executeScript({
 chrome.runtime.onMessage.addListener(
     function (request, sender) {
         // TODO render table with data
-        console.log(request);
-        console.log(sender);
+        var allBids = request.allBids;
+        console.log(allBids);
     }
 );
