@@ -27,5 +27,10 @@ function filterAttributes(bids: Bid[]): Bid[] {
     })
 }
 if (typeof pbjs !== "undefined") {
-    console.log(fetchAllBids(pbjs));
+    const allBids = fetchAllBids(pbjs);
+    const dataElement = document.createElement("div");
+    dataElement.id = "visualise-rtb-data";
+    dataElement.setAttribute("data-bids", JSON.stringify(allBids));
+    document.body.appendChild(dataElement);
+    console.log("data appended");
 }

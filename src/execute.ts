@@ -36,10 +36,13 @@ function filterAttributes(bids) {
     });
 }
 if (typeof pbjs !== "undefined") {
-    console.log(fetchAllBids(pbjs));
+    var allBids = fetchAllBids(pbjs);
+    var dataElement = document.createElement("div");
+    dataElement.id = "visualise-rtb-data";
+    dataElement.setAttribute("data-bids", JSON.stringify(allBids));
+    document.body.appendChild(dataElement);
 }
 `;
-// TODO encode data in DOM
 
 function createScriptElement() : HTMLScriptElement {
     const scriptElement = document.createElement("script");
