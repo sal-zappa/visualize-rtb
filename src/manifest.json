@@ -1,6 +1,6 @@
 {
     "name": "Visualise RTB",
-    "version": "0.1",
+    "version": "0.1.0",
     "description": "Visualise RTB",
     "permissions": [
         "activeTab"
