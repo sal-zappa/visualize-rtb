@@ -44,11 +44,25 @@ if (typeof pbjs !== "undefined") {
 }
 `;
 
+function clearScript() : void {
+    const currentScript = document.getElementById("visualise-rtb-script");
+    if (currentScript) {
+        currentScript.remove();
+    }
+    const currentData = document.getElementById("visualise-rtb-data");
+    if (currentData) {
+        currentData.remove();
+    }
+}
+
 function createScriptElement() : HTMLScriptElement {
+    clearScript();
     const scriptElement = document.createElement("script");
+    scriptElement.id = "visualise-rtb-script";
     scriptElement.innerHTML = domScript;
     return scriptElement;
 }
+
 const script = createScriptElement();
 document.head.appendChild(script);
 
