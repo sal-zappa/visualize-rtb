@@ -14,6 +14,15 @@ function formatData(data) {
     return (typeof data !== "undefined") ? data : "";
 }
 
+function formatPrice(price, currency) {
+    if (typeof price !== "undefined") {
+        return price.toLocaleString(undefined, {
+            style: 'currency', currency: currency
+        });
+    }
+    return "";
+}
+
 function renderTable(bids) {
     var table = document.createElement("table"); 
     var html = "" +
@@ -22,7 +31,7 @@ function renderTable(bids) {
             "<th>adId</th>" +
             "<th>bidder</th>" +
             "<th>timeToRespond</th>" +
-            "<th>cpm</th>" +
+            "<th>CPM</th>" +
             "<th>statusMessage</th>" +
             "<th>winner</th>" +
         "</tr>";
@@ -33,7 +42,7 @@ function renderTable(bids) {
                 "<td>" + formatData(bids[i].adId) + "</td>" +
                 "<td>" + formatData(bids[i].bidder) + "</td>" +
                 "<td>" + formatData(bids[i].timeToRespond) + "</td>" +
-                "<td>" + formatData(bids[i].cpm) + "</td>" +
+                "<td>" + formatPrice(bids[i].cpm, bids[i].currency) + "</td>" +
                 "<td>" + formatData(bids[i].statusMessage) + "</td>" +
                 "<td>" + ((typeof bids[i].timeToRespond !== "undefined") ? "yes" : "no") + "</td>" +
             "</tr>";
