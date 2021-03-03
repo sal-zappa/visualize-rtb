@@ -13,19 +13,6 @@ function flattenBids(bidsByAdUnit: BidsByAdUnit): Bid[] {
     return Object.values(bidsByAdUnit).map(x => x.bids).flat();
 }
 
-function filterAttributes(bids: Bid[]): Bid[] {
-    return bids.map((bid) => {
-        return {
-            adUnitCode: bid.adUnitCode,
-            adId: bid.adId,
-            bidder: bid.bidder,
-            timeToRespond: bid.timeToRespond,
-            cpm: bid.cpm,
-            statusMessage: bid.statusMessage,
-            winner: bid.winner
-        }
-    })
-}
 if (typeof pbjs !== "undefined") {
     const allBids = fetchAllBids(pbjs);
     const dataElement = document.createElement("div");

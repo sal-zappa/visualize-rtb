@@ -22,19 +22,6 @@ function fetchAllBids(library) {
 function flattenBids(bidsByAdUnit) {
     return Object.values(bidsByAdUnit).map(function (x) { return x.bids; }).flat();
 }
-function filterAttributes(bids) {
-    return bids.map(function (bid) {
-        return {
-            adUnitCode: bid.adUnitCode,
-            adId: bid.adId,
-            bidder: bid.bidder,
-            timeToRespond: bid.timeToRespond,
-            cpm: bid.cpm,
-            statusMessage: bid.statusMessage,
-            winner: bid.winner
-        };
-    });
-}
 if (typeof pbjs !== "undefined") {
     var allBids = fetchAllBids(pbjs);
     var dataElement = document.createElement("div");
