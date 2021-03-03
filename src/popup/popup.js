@@ -4,8 +4,8 @@ chrome.tabs.executeScript({
 
 chrome.runtime.onMessage.addListener(
     function (request, sender) {
-        var bids = request.allBids;
-        var table = renderTable(bids);
+        const bids = request.allBids;
+        const table = renderTable(bids);
         document.body.appendChild(table);
     }
 );
@@ -24,28 +24,28 @@ function formatPrice(price, currency) {
 }
 
 function renderTable(bids) {
-    var table = document.createElement("table"); 
-    var html = "" +
-        "<tr>" +
-            "<th>adUnitCode</th>" +
-            "<th>adId</th>" +
-            "<th>bidder</th>" +
-            "<th>timeToRespond</th>" +
-            "<th>CPM</th>" +
-            "<th>statusMessage</th>" +
-            "<th>winner</th>" +
-        "</tr>";
-    for (var i = 0; i < bids.length; i++) {
-        html += "" +
-            "<tr>" +
-                "<td>" + formatData(bids[i].adUnitCode) + "</td>" +
-                "<td>" + formatData(bids[i].adId) + "</td>" +
-                "<td>" + formatData(bids[i].bidder) + "</td>" +
-                "<td>" + formatData(bids[i].timeToRespond) + "</td>" +
-                "<td>" + formatPrice(bids[i].cpm, bids[i].currency) + "</td>" +
-                "<td>" + formatData(bids[i].statusMessage) + "</td>" +
-                "<td>" + ((typeof bids[i].timeToRespond !== "undefined") ? "yes" : "no") + "</td>" +
-            "</tr>";
+    const table = document.createElement("table"); 
+    let html = `
+        <tr>
+            <th>adUnitCode</th>
+            <th>adId</th>
+            <th>bidder</th>
+            <th>timeToRespond</th>
+            <th>CPM</th>
+            <th>statusMessage</th>
+            <th>winner</th>
+        </tr>`;
+    for (const bid of bids) {
+        html += `
+            <tr>
+                <td>${formatData(bid.adUnitCode)}</td>
+                <td>${formatData(bid.adId)}</td>
+                <td>${formatData(bid.bidder)}</td>
+                <td>${formatData(bid.timeToRespond)}</td>
+                <td>${formatPrice(bid.cpm, bid.currency)}</td>
+                <td>${formatData(bid.statusMessage)}</td>
+                <td>${((typeof bid.timeToRespond !== "undefined") ? "yes" : "no")}</td>
+            </tr>`;
     }
     table.innerHTML = html;
     return table;
