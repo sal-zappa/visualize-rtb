@@ -4,8 +4,9 @@ chrome.tabs.executeScript({
 
 chrome.runtime.onMessage.addListener(
     function (request, sender) {
-        const bids = request.allBids;
-        const table = renderTable(bids);
+        const allBids = request.allBids;
+        const bidsWithPrice = allBids.filter((bid) => typeof bid.cpm !== "undefined");
+        const table = renderTable(bidsWithPrice);
         document.body.appendChild(table);
     }
 );
@@ -14,9 +15,9 @@ function formatData(data) {
     return (typeof data !== "undefined") ? data : "";
 }
 
-function formatPrice(price, currency) {
-    if (typeof price !== "undefined") {
-        return price.toLocaleString(undefined, {
+function formatPrice(cpm, currency) {
+    if (typeof cpm !== "undefined") {
+        return cpm.toLocaleString(undefined, {
             style: 'currency', currency: currency
         });
     }
