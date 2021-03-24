@@ -1,4 +1,4 @@
-function renderBid(bid: Bid): string {
+function renderBid(bid) {
     return `
         <tr>
             <td>${bid.adUnitCode}</td>
@@ -12,12 +12,12 @@ function renderBid(bid: Bid): string {
     `;
 }
 
-function renderBids(bids: Bid[]): string[] {
+function renderBids(bids) {
     return bids.map(bid => renderBid(bid));
 }
 
 
-export function renderTable(bids: Bid[]): string {
+export function renderTable(bids) {
     return `
         <table>
             <tr>
