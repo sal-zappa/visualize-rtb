@@ -1,5 +1,7 @@
 # Changelog
 
+<!-- TODO: FIX CHANGELOG -->
+
 ### 0.0.2
 
 * Display only bids with price
