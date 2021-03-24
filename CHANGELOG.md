@@ -1,6 +1,8 @@
 # Changelog
 
-<!-- TODO: FIX CHANGELOG -->
+### 0.1.0
+
+* Code refactor: remove typescript and build process
 
 ### 0.0.2
 
