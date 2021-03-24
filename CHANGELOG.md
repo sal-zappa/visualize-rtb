@@ -3,6 +3,7 @@
 ### 0.1.0
 
 * Code refactor: remove typescript and build process
+* Show message when no header bidding is found
 
 ### 0.0.2
 
