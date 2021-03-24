@@ -1,6 +1,3 @@
-/*
-    This script is executed when the extension icon is clicked
-*/
 domScript = `
 function fetchAllBids(pbjs) {
     const winningBids = pbjs.getAllWinningBids();
