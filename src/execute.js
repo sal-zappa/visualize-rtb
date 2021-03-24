@@ -23,7 +23,6 @@ if (typeof pbjs !== "undefined") {
     dataElement.id = "visualise-rtb-data";
     dataElement.setAttribute("data-bids", JSON.stringify(allBids));
     document.body.appendChild(dataElement);
-    console.log("data appended");
 }
 `;
 
