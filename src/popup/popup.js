@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener(
         const allBids = request.allBids;
         const bidsWithPrice = allBids.filter((bid) => typeof bid.cpm !== "undefined");
         const table = renderTable(bidsWithPrice);
+        document.getElementById("message").innerText = "";
         document.body.appendChild(table);
     }
 );
