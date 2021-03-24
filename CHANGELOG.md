@@ -7,7 +7,6 @@
 * Bugfix: Don't try to fetch data from DOM if not present
 * Hide Time to respond
 
-
 ### 0.0.2
 
 * Display only bids with price
