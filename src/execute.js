@@ -1,7 +1,7 @@
 /*
     This script is executed when the extension icon is clicked
 */
-const domScript = `
+let domScript = `
 function fetchAllBids(pbjs) {
     const winningBids = pbjs.getAllWinningBids();
     for (const winningBid of winningBids) {
@@ -46,8 +46,8 @@ function createScriptElement() {
     return scriptElement;
 }
 
-const script = createScriptElement();
+let script = createScriptElement();
 document.head.appendChild(script);
 
-const allBids = JSON.parse(document.getElementById("visualise-rtb-data").dataset.bids);
+let allBids = JSON.parse(document.getElementById("visualise-rtb-data").dataset.bids);
 chrome.runtime.sendMessage({allBids: allBids});
