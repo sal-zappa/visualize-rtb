@@ -4,6 +4,8 @@
 
 * Code refactor: remove typescript and build process
 * Show message when no header bidding is found
+* Bugfix: Don't try to fetch data from DOM if not present
+
 
 ### 0.0.2
 
