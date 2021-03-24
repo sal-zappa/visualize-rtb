@@ -32,7 +32,6 @@ function renderTable(bids) {
             <th>adUnitCode</th>
             <th>adId</th>
             <th>bidder</th>
-            <th>timeToRespond</th>
             <th>CPM</th>
             <th>statusMessage</th>
             <th>winner</th>
@@ -43,7 +42,6 @@ function renderTable(bids) {
                 <td>${formatData(bid.adUnitCode)}</td>
                 <td>${formatData(bid.adId)}</td>
                 <td>${formatData(bid.bidder)}</td>
-                <td>${formatData(bid.timeToRespond)}</td>
                 <td>${formatPrice(bid.cpm, bid.currency)}</td>
                 <td>${formatData(bid.statusMessage)}</td>
                 <td>${((typeof bid.timeToRespond !== "undefined") ? "yes" : "no")}</td>
