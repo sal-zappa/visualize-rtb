@@ -42,8 +42,11 @@ function createScriptElement() {
     return scriptElement;
 }
 
+
 script = createScriptElement();
 document.head.appendChild(script);
-
-allBids = JSON.parse(document.getElementById("visualise-rtb-data").dataset.bids);
-chrome.runtime.sendMessage({allBids: allBids});
+visualiseRtbData = document.getElementById("visualise-rtb-data");
+if (visualiseRtbData) {
+    allBids = JSON.parse(visualiseRtbData.dataset.bids);
+    chrome.runtime.sendMessage({allBids: allBids});
+}
