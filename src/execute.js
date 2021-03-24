@@ -31,7 +31,7 @@ if (typeof pbjs !== "undefined") {
 }
 `;
 
-function clearScript() : void {
+function clearScript() {
     const currentScript = document.getElementById("visualise-rtb-script");
     if (currentScript) {
         currentScript.remove();
@@ -42,7 +42,7 @@ function clearScript() : void {
     }
 }
 
-function createScriptElement() : HTMLScriptElement {
+function createScriptElement() {
     clearScript();
     const scriptElement = document.createElement("script");
     scriptElement.id = "visualise-rtb-script";
